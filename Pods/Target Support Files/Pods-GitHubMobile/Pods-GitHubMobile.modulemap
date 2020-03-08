@@ -1,0 +1,6 @@
+framework module Pods_GitHubMobile {
+  umbrella header "Pods-GitHubMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
