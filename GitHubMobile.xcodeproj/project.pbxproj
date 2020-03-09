@@ -16,7 +16,9 @@
 		1A5FB9CB2414128D00E4F79F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9CA2414128D00E4F79F /* AuthService.swift */; };
 		1A5FB9CE2414293D00E4F79F /* GitHubConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9CD2414293D00E4F79F /* GitHubConstants.swift */; };
 		1A5FB9D224143E8400E4F79F /* GitHubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9D124143E8400E4F79F /* GitHubVC.swift */; };
-		1A5FB9D4241577B800E4F79F /* ProfileDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9D3241577B800E4F79F /* ProfileDataFetcher.swift */; };
+		1A5FB9D4241577B800E4F79F /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9D3241577B800E4F79F /* DataFetcher.swift */; };
+		1A5FB9D92416B8D700E4F79F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9D82416B8D700E4F79F /* Repository.swift */; };
+		1A5FB9DF2416E64000E4F79F /* RepositoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5FB9DD2416E64000E4F79F /* RepositoriesVC.swift */; };
 		A97CB5281CD73C21D35B89F2 /* Pods_GitHubMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A40B9AF6412222A75C0E36 /* Pods_GitHubMobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +34,9 @@
 		1A5FB9CA2414128D00E4F79F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1A5FB9CD2414293D00E4F79F /* GitHubConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubConstants.swift; sourceTree = "<group>"; };
 		1A5FB9D124143E8400E4F79F /* GitHubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubVC.swift; sourceTree = "<group>"; };
-		1A5FB9D3241577B800E4F79F /* ProfileDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataFetcher.swift; sourceTree = "<group>"; };
+		1A5FB9D3241577B800E4F79F /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		1A5FB9D82416B8D700E4F79F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		1A5FB9DD2416E64000E4F79F /* RepositoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesVC.swift; sourceTree = "<group>"; };
 		46A40B9AF6412222A75C0E36 /* Pods_GitHubMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37F190B79EAD642B956C3DD /* Pods-GitHubMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubMobile.release.xcconfig"; path = "Target Support Files/Pods-GitHubMobile/Pods-GitHubMobile.release.xcconfig"; sourceTree = "<group>"; };
 		E38E717C4296C1A4613D674B /* Pods-GitHubMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubMobile.debug.xcconfig"; path = "Target Support Files/Pods-GitHubMobile/Pods-GitHubMobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5FB9CA2414128D00E4F79F /* AuthService.swift */,
-				1A5FB9D3241577B800E4F79F /* ProfileDataFetcher.swift */,
+				1A5FB9D3241577B800E4F79F /* DataFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5FB9CD2414293D00E4F79F /* GitHubConstants.swift */,
+				1A5FB9D82416B8D700E4F79F /* Repository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				1A5FB9B92414125F00E4F79F /* LoginVC.swift */,
 				1A5FB9D124143E8400E4F79F /* GitHubVC.swift */,
+				1A5FB9DD2416E64000E4F79F /* RepositoriesVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,8 +251,10 @@
 				1A5FB9BA2414125F00E4F79F /* LoginVC.swift in Sources */,
 				1A5FB9B62414125F00E4F79F /* AppDelegate.swift in Sources */,
 				1A5FB9D224143E8400E4F79F /* GitHubVC.swift in Sources */,
-				1A5FB9D4241577B800E4F79F /* ProfileDataFetcher.swift in Sources */,
+				1A5FB9D92416B8D700E4F79F /* Repository.swift in Sources */,
+				1A5FB9D4241577B800E4F79F /* DataFetcher.swift in Sources */,
 				1A5FB9CB2414128D00E4F79F /* AuthService.swift in Sources */,
+				1A5FB9DF2416E64000E4F79F /* RepositoriesVC.swift in Sources */,
 				1A5FB9CE2414293D00E4F79F /* GitHubConstants.swift in Sources */,
 				1A5FB9B82414125F00E4F79F /* SceneDelegate.swift in Sources */,
 			);

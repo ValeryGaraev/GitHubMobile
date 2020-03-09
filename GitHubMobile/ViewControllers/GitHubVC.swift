@@ -35,12 +35,23 @@ class GitHubVC: UIViewController, WKNavigationDelegate {
         networkService.requestAccessToken(request: navigationAction.request) { result in
             switch result {
             case .success(let accessToken):
-                let saved = KeychainWrapper.standard.set(accessToken, forKey: "accessToken")
+                print(accessToken)
+                let _ = KeychainWrapper.standard.set(accessToken, forKey: "accessToken")
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true)
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
         decisionHandler(.allow)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "repositoriesSegue" {
+            let destination = segue.destination as! RepositoriesVC
+            destination.repositories = LoginVC().repositories
+        }
     }
     
 }

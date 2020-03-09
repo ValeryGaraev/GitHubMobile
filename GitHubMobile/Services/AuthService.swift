@@ -51,19 +51,17 @@ class AuthService: Auth {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         let session = URLSession(configuration: .default)
         
-        do {
-            let task = session.dataTask(with: request) { data, response, _ in
-                guard let data = data, (response as! HTTPURLResponse).statusCode == 200 else {
-                    completion(.failure(.responseProblem))
-                    return
-                }
-                guard let results = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [AnyHashable : Any] else {
-                    completion(.failure(.decodingProblem))
-                    return
-                }
-                completion(.success(results))
+        let task = session.dataTask(with: request) { data, response, _ in
+            guard let data = data, (response as! HTTPURLResponse).statusCode == 200 else {
+                completion(.failure(.responseProblem))
+                return
             }
-            task.resume()
+            guard let results = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [AnyHashable : Any] else {
+                completion(.failure(.decodingProblem))
+                return
+            }
+            completion(.success(results))
         }
+        task.resume()
     }
 }
